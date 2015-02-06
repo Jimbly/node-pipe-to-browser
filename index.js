@@ -1,3 +1,3 @@
-var pipeResponse = require('./lib/pipeResponse.js')
+var pipeResponse = require('./lib/pipeResponse.js');
 
-exports.pipeResponse = pipeResponse.pipeResponse
+exports.pipeResponse = pipeResponse.pipeResponse;
