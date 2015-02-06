@@ -5,8 +5,8 @@ node-pipe-to-browser features auto scrolling (with enable/disable), ansi to html
 
 Originally a fork from [kessler/node-bcat](https://github.com/kessler/node-bcat), reworked as a library interface instead of just a command line too.  Ideal for adding a route to your servers that gives you streaming access to your logs.
 
-# library usage
-You can also use pipe-to-browser as a library to pipe an arbitrary stream to a http response:
+# Library usage
+You can use pipe-to-browser as a library to pipe an arbitrary stream to a http response:
 ```
 var pipe_to_browser = require('./')
 var fs = require('fs')
@@ -23,7 +23,7 @@ http.createServer(function (req, res) {
 
 # Command-line utility mode
 
-This module uses [RC](https://github.com/dominictarr/rc) to manage its configuration, so in addition to command line arguments you may save your favorite configuration in .pipe-to-browserrc.
+You can also use pipe-to-browser as a stand-alone command line utility. This module uses [RC](https://github.com/dominictarr/rc) to manage its configuration, so in addition to command line arguments you may save your favorite configuration in .pipe-to-browserrc.
 
 ## example
 ```
