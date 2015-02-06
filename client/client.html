@@ -1,0 +1,24 @@
+<html><head><style>
+  body {
+    background-color: <%= bg %>;
+    color: <%= fg %>;
+  }
+  div#container {
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+  div#autoscroll {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+  }
+</style></head>
+<body>
+<div id="autoscroll">Auto scroll
+  <input type="checkbox" id="autoscrollToggle"<%= (autoscroll ? ' checked' : '') %>/>
+</div>
+<script>
+  var clientConfig = <%= clientConfig %>;
+  <%= script %>
+</script>
+<div id="container">
