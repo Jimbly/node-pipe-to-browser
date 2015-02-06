@@ -13,7 +13,7 @@ var argv = require('optimist')
 	.boolean('disableNewlineReplace')
 	.argv
 
-var config = rc('bcat', pipeResponse.defaultConfig)
+var config = rc('pipe-to-browser', pipeResponse.defaultConfig)
 
 if (argv.usage || argv.help) {
 	console.log(require('./usage.js'))
