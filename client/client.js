@@ -2,14 +2,21 @@
 /*globals clientConfig*/
 
 function run() {
+  var local_storage_key = 'pipe-to-browser.autoscroll';
   var ref;
   function startAutoScroll() {
+    var last_size = 0;
     function scroll() {
       var elem = document.getElementById('container');
-      elem && elem.scrollIntoView(false);
+      var h = elem.scrollHeight;
+      if (elem && h !== last_size) {
+        // Only scroll if the content has changed
+        last_size = h;
+        elem.scrollIntoView(false);
+      }
     }
     ref = window.setInterval(scroll, clientConfig.scrollDownInterval);
-    scroll();
+    scroll(); // scroll immediately when toggling the option
   }
 
   function stopAutoScroll() {
@@ -21,14 +28,23 @@ function run() {
   if (scrollToggle) {
     scrollToggle.addEventListener('change', function () {
       if (scrollToggle.checked) {
+        localStorage[local_storage_key] = 'on';
         startAutoScroll();
       } else {
+        localStorage[local_storage_key] = 'off';
         stopAutoScroll();
       }
     });
   }
 
-  if (clientConfig.autoscroll) {
+  if (localStorage[local_storage_key]) {
+    if (localStorage[local_storage_key] === 'on') {
+      startAutoScroll();
+      scrollToggle.checked = 'checked';
+    } else {
+      scrollToggle.checked = false;
+    }
+  } else if (clientConfig.autoscroll) {
     startAutoScroll();
   }
 }

@@ -12,8 +12,12 @@ var obj = {
 };
 
 console.log('abcdefg foo bar');
-inspect(obj);
+for (var ii = 0; ii < 20; ++ii) {
+  obj.r = Math.random();
+  inspect(obj);
+}
 
 setInterval(function () {
+  obj.r = Math.random();
   inspect(obj);
 }, 1000);
