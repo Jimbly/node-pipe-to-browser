@@ -61,6 +61,7 @@ then
  --disableNewlineReplace  disable new line replacement                 [default: false]
  --ansi                   show colorful ansi (implies text/html)       [default: true]
  --ansiOptions            override replacement of ansi black color
+ --autoscroll             default to auto-scrolling (overridden by browser localStorage)  [default: true]
  --scrollDownInterval     interval to execute javascript scroll down   [default: 1000 (ms)]
  --serverTimeout          http://nodejs.org/api/http.html#http_server_timeout  [default: 0 (no timeout)]
 ```
