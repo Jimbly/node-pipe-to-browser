@@ -8,12 +8,16 @@ function run() {
     var last_size = 0;
     function scroll() {
       var elem = document.getElementById('container');
-      var h = elem.scrollHeight;
-      if (elem && h !== last_size) {
-        // Only scroll if the content has changed
-        last_size = h;
-        elem.scrollIntoView(false);
+      if (!elem) {
+        return;
       }
+      var h = elem.scrollHeight;
+      if (h === last_size) {
+        return;
+      }
+      // Only scroll if the content has changed
+      last_size = h;
+      elem.scrollIntoView(false);
     }
     ref = window.setInterval(scroll, clientConfig.scrollDownInterval);
     scroll(); // scroll immediately when toggling the option
