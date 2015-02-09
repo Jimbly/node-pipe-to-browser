@@ -3,7 +3,7 @@ Pipe to the browser library, very useful for log tailing.
 
 node-pipe-to-browser features auto scrolling (with enable/disable), ansi to html coloring (--ansi) and behavior and color customization.
 
-Originally a fork from [kessler/node-bcat](https://github.com/kessler/node-bcat), reworked as a library interface instead of just a command line too.  Ideal for adding a route to your servers that gives you streaming access to your logs.
+Originally a fork from [kessler/node-bcat](https://github.com/kessler/node-bcat), reworked as a library interface instead of just a command line tool.  Ideal for adding a route to your servers that gives you streaming access to your logs.
 
 # Library usage
 You can use pipe-to-browser as a library to pipe an arbitrary stream to a http response:
