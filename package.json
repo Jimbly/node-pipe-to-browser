@@ -42,6 +42,7 @@
     "text-table": "~0.2.0"
   },
   "devDependencies": {
-    "eyes": "~0.1.8"
+    "eyes": "~0.1.8",
+    "mocha": "^2.4.5"
   }
 }
