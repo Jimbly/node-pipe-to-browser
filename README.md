@@ -1,6 +1,11 @@
 # node-pipe-to-browser
 Pipe to the browser library, very useful for log tailing.
 
+[![Build Status](https://img.shields.io/travis/Jimbly/node-pipe-to-browser/master.svg)](https://travis-ci.org/Jimbly/node-pipe-to-browser)
+[![Dependency Status](https://img.shields.io/david/Jimbly/node-pipe-to-browser.svg)](https://david-dm.org/Jimbly/node-pipe-to-browser)
+[![NPM version](https://img.shields.io/npm/v/pipe-to-browser.svg)](https://www.npmjs.org/package/pipe-to-browser)
+
+
 node-pipe-to-browser features auto scrolling (with enable/disable), ansi to html coloring (--ansi) and behavior and color customization.
 
 Originally a fork from [kessler/node-bcat](https://github.com/kessler/node-bcat), reworked as a library interface instead of just a command line tool.  Ideal for adding a route to your servers that gives you streaming access to your logs.
